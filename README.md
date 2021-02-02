@@ -1,1 +1,1 @@
-#  Palladio-Addons-Failuremodel
+# Palladio-Addons-FailureScenario
