@@ -17,4 +17,5 @@
             class="org.palladiosimulator.failuremodel.failuretype.FailuretypePackage"
             genModel="model/failuremodel.genmodel"/>
    </extension>
+
 </plugin>

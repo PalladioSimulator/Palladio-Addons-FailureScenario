@@ -89,4 +89,5 @@
             contributorClass="org.palladiosimulator.failuremodel.failuretype.presentation.FailuretypeActionBarContributor">
       </editor>
    </extension>
+
 </plugin>

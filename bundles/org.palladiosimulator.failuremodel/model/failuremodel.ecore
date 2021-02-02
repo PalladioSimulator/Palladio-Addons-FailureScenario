@@ -9,7 +9,8 @@
           eType="#//failurescenario/Occurence" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ResourcePointer">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="pointedResource" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="pointedResource" lowerBound="1"
+          eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Occurence">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="pointOfTime" lowerBound="1"
@@ -32,14 +33,14 @@
     <eClassifiers xsi:type="ecore:EClass" name="HWInducedBitFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Content"/>
     <eClassifiers xsi:type="ecore:EClass" name="SWFailure" abstract="true" eSuperTypes="#//failuretype/Failure">
       <eOperations name="getSupportedElementTypes" lowerBound="1" upperBound="-1"
-          eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+          eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Permanent" abstract="true" interface="true"
         eSuperTypes="#//failuretype/Mode"/>
     <eClassifiers xsi:type="ecore:EClass" name="SWCrashFailure" eSuperTypes="#//failuretype/Crash #//failuretype/SWFailure"/>
     <eClassifiers xsi:type="ecore:EClass" name="LinkFailure" abstract="true" eSuperTypes="#//failuretype/Failure">
       <eOperations name="getSupportedElementTypes" lowerBound="1" upperBound="-1"
-          eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+          eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SWTransientCrashFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Crash #//failuretype/Transient">
       <eStructuralFeatures xsi:type="ecore:EReference" name="decoratedFailure" lowerBound="1"
@@ -56,11 +57,11 @@
     <eClassifiers xsi:type="ecore:EClass" name="SWInducedBitFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Content"/>
     <eClassifiers xsi:type="ecore:EClass" name="HWFailure" abstract="true" eSuperTypes="#//failuretype/Failure">
       <eOperations name="getSupportedElementTypes" lowerBound="1" upperBound="-1"
-          eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+          eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Failure" abstract="true">
       <eOperations name="getSupportedElementTypes" lowerBound="1" upperBound="-1"
-          eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+          eType="ecore:EClass ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Byzantine" abstract="true" interface="true"
         eSuperTypes="#//failuretype/Mode"/>
