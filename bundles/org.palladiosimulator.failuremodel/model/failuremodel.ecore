@@ -8,7 +8,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="occurences" upperBound="-1"
           eType="#//failurescenario/Occurence" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourcePointer"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourcePointer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="pointedResource" eType="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Occurence">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="pointOfTime" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
