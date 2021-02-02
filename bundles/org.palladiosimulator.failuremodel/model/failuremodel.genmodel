@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.palladiosimulator.failuremodel/src-gen" editDirectory="/org.palladiosimulator.failuremodel.edit/src-gen"
+    editorDirectory="/org.palladiosimulator.failuremodel.editor/src-gen" modelPluginID="org.palladiosimulator.failuremodel"
+    modelName="Failuremodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="/org.palladiosimulator.failuremodel.tests/src-gen" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>failuremodel.ecore</foreignModel>
+  <genPackages prefix="Failuremodel" basePackage="org.palladiosimulator" disposableProviderFactory="true"
+      ecorePackage="failuremodel.ecore#/">
+    <nestedGenPackages prefix="Failurescenario" basePackage="org.palladiosimulator.failuremodel"
+        disposableProviderFactory="true" ecorePackage="failuremodel.ecore#//failurescenario">
+      <genClasses ecoreClass="failuremodel.ecore#//failurescenario/FailureScenario">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference failuremodel.ecore#//failurescenario/FailureScenario/occurences"/>
+      </genClasses>
+      <genClasses ecoreClass="failuremodel.ecore#//failurescenario/ResourcePointer"/>
+      <genClasses ecoreClass="failuremodel.ecore#//failurescenario/Occurence">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute failuremodel.ecore#//failurescenario/Occurence/pointOfTime"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference failuremodel.ecore#//failurescenario/Occurence/failure"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference failuremodel.ecore#//failurescenario/Occurence/origin"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Failuretype" basePackage="org.palladiosimulator.failuremodel"
+        disposableProviderFactory="true" ecorePackage="failuremodel.ecore#//failuretype">
+      <genClasses ecoreClass="failuremodel.ecore#//failuretype/LinkDelayFailure"/>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/Content"/>
+      <genClasses ecoreClass="failuremodel.ecore#//failuretype/SWPermanentCrashFailure">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference failuremodel.ecore#//failuretype/SWPermanentCrashFailure/decoratedFailure"/>
+      </genClasses>
+      <genClasses ecoreClass="failuremodel.ecore#//failuretype/HWInducedBitFailure"/>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/SWFailure"/>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/Permanent"/>
+      <genClasses ecoreClass="failuremodel.ecore#//failuretype/SWCrashFailure"/>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/LinkFailure"/>
+      <genClasses ecoreClass="failuremodel.ecore#//failuretype/SWTransientCrashFailure">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference failuremodel.ecore#//failuretype/SWTransientCrashFailure/decoratedFailure"/>
+      </genClasses>
+      <genClasses ecoreClass="failuremodel.ecore#//failuretype/LinkResponseFailure"/>
+      <genClasses ecoreClass="failuremodel.ecore#//failuretype/SWLongCalcFailure"/>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/Transient"/>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/Crash"/>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/Timing"/>
+      <genClasses ecoreClass="failuremodel.ecore#//failuretype/SWInducedBitFailure"/>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/HWFailure">
+        <genOperations ecoreOperation="failuremodel.ecore#//failuretype/HWFailure/getSupportedElementTypes"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/Failure">
+        <genOperations ecoreOperation="failuremodel.ecore#//failuretype/Failure/getSupportedElementTypes"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/Byzantine"/>
+      <genClasses ecoreClass="failuremodel.ecore#//failuretype/HWLowerProcessingRateFailure"/>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/Mode"/>
+      <genClasses ecoreClass="failuremodel.ecore#//failuretype/LinkCrashFailure"/>
+      <genClasses ecoreClass="failuremodel.ecore#//failuretype/HWNAFailure"/>
+      <genClasses image="false" ecoreClass="failuremodel.ecore#//failuretype/Domain"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

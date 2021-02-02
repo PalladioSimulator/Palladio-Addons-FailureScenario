@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated dummy -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.failuremodel.dummy.presentation.DummyModelWizardID"
+            name="%_UI_DummyModelWizard_label"
+            class="org.palladiosimulator.failuremodel.dummy.presentation.DummyModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DummyModelFile.gif">
+         <description>%_UI_DummyModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated dummy -->
+      <editor
+            id="org.palladiosimulator.failuremodel.dummy.presentation.DummyEditorID"
+            name="%_UI_DummyEditor_label"
+            icon="icons/full/obj16/DummyModelFile.gif"
+            extensions="dummy"
+            class="org.palladiosimulator.failuremodel.dummy.presentation.DummyEditor"
+            contributorClass="org.palladiosimulator.failuremodel.dummy.presentation.DummyActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated failuremodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.failuremodel.failurescenario.presentation.FailurescenarioModelWizardID"
+            name="%_UI_FailurescenarioModelWizard_label"
+            class="org.palladiosimulator.failuremodel.failurescenario.presentation.FailurescenarioModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/FailurescenarioModelFile.gif">
+         <description>%_UI_FailurescenarioModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated failuremodel -->
+      <editor
+            id="org.palladiosimulator.failuremodel.failurescenario.presentation.FailurescenarioEditorID"
+            name="%_UI_FailurescenarioEditor_label"
+            icon="icons/full/obj16/FailurescenarioModelFile.gif"
+            extensions="failurescenario"
+            class="org.palladiosimulator.failuremodel.failurescenario.presentation.FailurescenarioEditor"
+            contributorClass="org.palladiosimulator.failuremodel.failurescenario.presentation.FailurescenarioActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated failuremodel -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.failuremodel.failuretype.presentation.FailuretypeModelWizardID"
+            name="%_UI_FailuretypeModelWizard_label"
+            class="org.palladiosimulator.failuremodel.failuretype.presentation.FailuretypeModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/FailuretypeModelFile.gif">
+         <description>%_UI_FailuretypeModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated failuremodel -->
+      <editor
+            id="org.palladiosimulator.failuremodel.failuretype.presentation.FailuretypeEditorID"
+            name="%_UI_FailuretypeEditor_label"
+            icon="icons/full/obj16/FailuretypeModelFile.gif"
+            extensions="failuretype"
+            class="org.palladiosimulator.failuremodel.failuretype.presentation.FailuretypeEditor"
+            contributorClass="org.palladiosimulator.failuremodel.failuretype.presentation.FailuretypeActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

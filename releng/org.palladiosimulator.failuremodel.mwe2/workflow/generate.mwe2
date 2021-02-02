@@ -1,0 +1,42 @@
+module generate
+
+import org.eclipse.emf.mwe2.ecore.EcoreGenerator
+import tools.mdsd.ecoreworkflow.mwe2lib.bean.EclipseRCPSupportingStandaloneSetup
+import tools.mdsd.ecoreworkflow.mwe2lib.component.ContextDependentMapping
+import tools.mdsd.ecoreworkflow.mwe2lib.component.URISupportingDirectoryCleaner
+import tools.mdsd.ecoreworkflow.mwe2lib.component.GapPatternPostProcessor
+
+var workspaceRoot = "../../"
+
+Workflow {
+	bean = EclipseRCPSupportingStandaloneSetup {
+		scanClassPath = true
+		platformUri = workspaceRoot
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore"
+			onStandalone = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore"
+		}
+		uriMap = ContextDependentMapping {
+			onRunningPlatform = "platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel"
+			onStandalone = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		}
+		registerGenModelFile = "platform:/resource/org.eclipse.emf.codegen.ecore/model/GenModel.genmodel"
+		registerGenModelFile = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+	}
+
+	component = EcoreGenerator {
+		generateCustomClasses = false
+		generateEdit = true
+		generateEditor = true
+		genModel = "platform:/resource/org.palladiosimulator.failuremodel/model/failuremodel.genmodel"
+		srcPath = "platform:/resource/org.palladiosimulator.failuremodel/src-gen"
+		srcPath = "platform:/resource/org.palladiosimulator.failuremodel/src"
+	}
+
+	component = GapPatternPostProcessor {
+		folders = {
+			gen = "platform:/resource/org.palladiosimulator.failuremodel/src-gen"
+			src = "platform:/resource/org.palladiosimulator.failuremodel/src"
+		}
+	}	
+}

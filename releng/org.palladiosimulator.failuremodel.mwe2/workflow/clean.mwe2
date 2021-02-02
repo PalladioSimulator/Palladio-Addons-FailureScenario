@@ -1,0 +1,20 @@
+module clean
+
+import tools.mdsd.ecoreworkflow.mwe2lib.bean.EclipseRCPSupportingStandaloneSetup
+import tools.mdsd.ecoreworkflow.mwe2lib.component.URISupportingDirectoryCleaner
+
+var workspaceRoot = "../../"
+
+Workflow {
+	bean = EclipseRCPSupportingStandaloneSetup {
+		scanClassPath = true
+		platformUri = workspaceRoot
+	}
+
+	component = URISupportingDirectoryCleaner {
+		directory = "platform:/resource/org.palladiosimulator.failuremodel/src-gen"
+		directory = "platform:/resource/org.palladiosimulator.failuremodel.edit/src-gen"
+		directory = "platform:/resource/org.palladiosimulator.failuremodel.editor/src-gen"
+		exclude = ".gitkeep"
+	}
+}
