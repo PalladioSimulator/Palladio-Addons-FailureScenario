@@ -2,8 +2,8 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EclipsePlugin Test
 Bundle-SymbolicName: org.palladiosimulator.failuremodel.test
-Bundle-Version: 0.1.0.qualifier
-Fragment-Host: org.palladiosimulator.failuremodel;bundle-version="0.1.0"
+Bundle-Version: 5.0.0.qualifier
+Fragment-Host: org.palladiosimulator.failuremodel;bundle-version="5.0.0"
 Automatic-Module-Name: org.palladiosimulator.failuremodel.test
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: org.junit;version="4.12.0",

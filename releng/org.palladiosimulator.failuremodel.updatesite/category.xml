@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature id="org.palladiosimulator.failuremodel.feature" version="0.1.0.qualifier">
+   <feature id="org.palladiosimulator.failuremodel.feature" version="5.0.0.qualifier">
       <category name="palladio-addons-failuremodel.category"/>
    </feature>
-   <feature id="org.palladiosimulator.failuremodel.feature.source" version="0.1.0.qualifier">
+   <feature id="org.palladiosimulator.failuremodel.feature.source" version="5.0.0.qualifier">
       <category name="palladio-addons-failuremodel.category.source"/>
    </feature>
    <category-def name="palladio-addons-failuremodel.category" label="Palladio-Addons-Failuremodel"/>
