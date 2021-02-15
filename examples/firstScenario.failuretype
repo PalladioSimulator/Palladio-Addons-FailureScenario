@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<failuretype:FailureTypeRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:failuretype="http://palladiosimulator.org/failuretype/1.0" id="_aPGr4G9EEeuLb6V1wGbWSw">
+  <failuretypes xsi:type="failuretype:SWCrashFailure" id="_bokZMm9EEeuLb6V1wGbWSw"/>
+  <failuretypes xsi:type="failuretype:HWNAFailure" id="_hdWbR29EEeuLb6V1wGbWSw"/>
+  <failuretypes xsi:type="failuretype:HWPermanentNAFailure" id="_c0tcOG9EEeuLb6V1wGbWSw" decoratedFailure="_hdWbR29EEeuLb6V1wGbWSw"/>
+  <failuretypes xsi:type="failuretype:LinkCrashFailure" id="_fHglTW9EEeuLb6V1wGbWSw"/>
+  <failuretypes xsi:type="failuretype:LinkArbitraryFailure" id="_eG9HPG9EEeuLb6V1wGbWSw" possibleFailures="_fHglTW9EEeuLb6V1wGbWSw"/>
+</failuretype:FailureTypeRepository>

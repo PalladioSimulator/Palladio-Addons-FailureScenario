@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<failurescenario:FailureScenarioRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:failurescenario="http://palladiosimulator.org/failurescenario/1.0" xmlns:failuretype="http://palladiosimulator.org/failuretype/1.0" id="_wLmYYG9EEeuLb6V1wGbWSw">
+  <failurescenarios id="_w2CcgG9EEeuLb6V1wGbWSw">
+    <occurences pointOfTime="1">
+      <failure xsi:type="failuretype:SWCrashFailure" href="firstScenario.failuretype#_bokZMm9EEeuLb6V1wGbWSw"/>
+      <origin xsi:type="failurescenario:InternalActionReference">
+        <internalAction href="default.repository#_rl6MwCHbEd62GabW1zGSBw"/>
+      </origin>
+    </occurences>
+    <occurences pointOfTime="2">
+      <failure xsi:type="failuretype:HWPermanentNAFailure" href="firstScenario.failuretype#_c0tcOG9EEeuLb6V1wGbWSw"/>
+      <origin xsi:type="failurescenario:ProcessingResourceReference">
+        <processingResource href="My.resourceenvironment#_ssJ0QYr-EeG0c6Q1F-wA1Q"/>
+      </origin>
+    </occurences>
+  </failurescenarios>
+  <failurescenarios id="_xrmykG9EEeuLb6V1wGbWSw"/>
+</failurescenario:FailureScenarioRepository>
