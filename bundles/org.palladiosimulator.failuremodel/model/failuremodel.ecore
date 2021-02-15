@@ -20,14 +20,15 @@
         <details key="constraints" value="ensureCorrectOrigin"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="ensureCorrectOrigin" value="( self.origin.oclIsTypeOf(LinkingResourceReference) and ( self.failure.oclIsKindOf(failuremodel::failuretype::LinkFailure) ) )&#xA;or&#xA;( self.origin.oclIsTypeOf(ProcessingResourceReference) and ( self.failure.oclIsKindOf(failuremodel::failuretype::HWFailure) ) )&#xA;or&#xA;( self.origin.oclIsTypeOf(InternalActionReference) and ( self.failure.oclIsKindOf(failuremodel::failuretype::SWFailure) ) )"/>
+        <details key="ensureCorrectOrigin" value="( self.origin.oclIsTypeOf(LinkingResourceReference) and ( self.failure.oclIsKindOf(failuretype::LinkFailure) ) )&#xA;or&#xA;( self.origin.oclIsTypeOf(ProcessingResourceReference) and ( self.failure.oclIsKindOf(failuretype::HWFailure) ) )&#xA;or&#xA;( self.origin.oclIsTypeOf(InternalActionReference) and ( self.failure.oclIsKindOf(failuretype::SWFailure) ) )"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="pointOfTime" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="failure" lowerBound="1"
           eType="#//failuretype/Failure"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="origin" lowerBound="1"
           eType="#//failurescenario/Reference" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="pointInTime" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Reference" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="LinkingResourceReference" eSuperTypes="#//failurescenario/Reference">
@@ -72,8 +73,12 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Timing" abstract="true" eSuperTypes="#//failuretype/Domain">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="delayFactor" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="delay" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="scalingFactor" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Crash" abstract="true" eSuperTypes="#//failuretype/Domain"/>
     <eClassifiers xsi:type="ecore:EClass" name="Mode" abstract="true"/>
@@ -81,44 +86,67 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="One-time termination, or for the specified duration."/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eTypeParameters name="Failuretype">
+        <eBounds eClassifier="#//failuretype/Failure"/>
+      </eTypeParameters>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="duration" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/PCMRandomVariable"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="decoratedFailure" lowerBound="1">
+        <eGenericType eTypeParameter="#//failuretype/Transient/Failuretype"/>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Permanent" abstract="true" eSuperTypes="#//failuretype/Mode">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="The time period up to which the error reoccurs is stored. When 1 permanently."/>
+        <details key="documentation" value="Permanent Failure"/>
       </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="reoccurencePeriod" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eTypeParameters name="Failuretype">
+        <eBounds eClassifier="#//failuretype/Failure"/>
+      </eTypeParameters>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="decoratedFailure" lowerBound="1">
+        <eGenericType eTypeParameter="#//failuretype/Permanent/Failuretype"/>
+      </eStructuralFeatures>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Byzantine" abstract="true" eSuperTypes="#//failuretype/Mode">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="probabilityOfOccurence"
           lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SWInducedBitFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Content"/>
-    <eClassifiers xsi:type="ecore:EClass" name="SWLongCalcFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Timing"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SWContentFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Content"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SWTimingFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Timing"/>
     <eClassifiers xsi:type="ecore:EClass" name="SWCrashFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Crash"/>
-    <eClassifiers xsi:type="ecore:EClass" name="SWPermanentCrashFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Crash #//failuretype/Permanent">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="decoratedFailure" lowerBound="1"
-          eType="#//failuretype/SWCrashFailure"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SWPermanentCrashFailure">
+      <eGenericSuperTypes eClassifier="#//failuretype/SWFailure"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Crash"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Permanent">
+        <eTypeArguments eClassifier="#//failuretype/SWCrashFailure"/>
+      </eGenericSuperTypes>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SWTransientCrashFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Crash #//failuretype/Transient">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="decoratedFailure" lowerBound="1"
-          eType="#//failuretype/SWCrashFailure"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SWTransientCrashFailure">
+      <eGenericSuperTypes eClassifier="#//failuretype/SWFailure"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Crash"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Transient">
+        <eTypeArguments eClassifier="#//failuretype/SWCrashFailure"/>
+      </eGenericSuperTypes>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="HWInducedBitFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Content"/>
-    <eClassifiers xsi:type="ecore:EClass" name="HWLowerProcessingRateFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Timing"/>
-    <eClassifiers xsi:type="ecore:EClass" name="HWNAFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Crash"/>
-    <eClassifiers xsi:type="ecore:EClass" name="HWPermanentNAFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Crash #//failuretype/Permanent">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="decoratedFailure" lowerBound="1"
-          eType="#//failuretype/HWNAFailure"/>
+    <eClassifiers xsi:type="ecore:EClass" name="HWContentFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Content"/>
+    <eClassifiers xsi:type="ecore:EClass" name="HWTimingFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Timing"/>
+    <eClassifiers xsi:type="ecore:EClass" name="HWCrashFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Crash"/>
+    <eClassifiers xsi:type="ecore:EClass" name="HWPermanentNAFailure">
+      <eGenericSuperTypes eClassifier="#//failuretype/HWFailure"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Crash"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Permanent">
+        <eTypeArguments eClassifier="#//failuretype/HWCrashFailure"/>
+      </eGenericSuperTypes>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="HWTransientNAFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Crash #//failuretype/Transient">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="decoratedFailure" lowerBound="1"
-          eType="#//failuretype/HWNAFailure"/>
+    <eClassifiers xsi:type="ecore:EClass" name="HWTransientNAFailure">
+      <eGenericSuperTypes eClassifier="#//failuretype/HWFailure"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Crash"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Transient">
+        <eTypeArguments eClassifier="#//failuretype/HWCrashFailure"/>
+      </eGenericSuperTypes>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LinkResponseFailure" eSuperTypes="#//failuretype/LinkFailure #//failuretype/Content"/>
-    <eClassifiers xsi:type="ecore:EClass" name="LinkDelayFailure" eSuperTypes="#//failuretype/LinkFailure #//failuretype/Timing"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LinkContentFailure" eSuperTypes="#//failuretype/LinkFailure #//failuretype/Content"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LinkTimingFailure" eSuperTypes="#//failuretype/LinkFailure #//failuretype/Timing"/>
     <eClassifiers xsi:type="ecore:EClass" name="LinkArbitraryFailure" eSuperTypes="#//failuretype/LinkFailure #//failuretype/Byzantine">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="The byzantine failure probability generates one of the stored failure types when triggered."/>
@@ -128,15 +156,18 @@
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
         <details key="noLinkArbitraryFailureAllowedForInternalPossibleFailuresDescription"
-            value="not (self.possibleFailures -> exists(self.oclIsTypeOf(LinkArbitraryFailure)))"/>
+            value="not (self.possibleFailures -> exists(oclIsTypeOf(LinkArbitraryFailure)))"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="possibleFailures" lowerBound="1"
           upperBound="-1" eType="#//failuretype/LinkFailure"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LinkCrashFailure" eSuperTypes="#//failuretype/LinkFailure #//failuretype/Crash"/>
-    <eClassifiers xsi:type="ecore:EClass" name="LinkOmissionFailure" eSuperTypes="#//failuretype/LinkFailure #//failuretype/Crash #//failuretype/Transient">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="decoratedFailure" lowerBound="1"
-          eType="#//failuretype/LinkCrashFailure"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LinkTransientCrashFailure">
+      <eGenericSuperTypes eClassifier="#//failuretype/LinkFailure"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Crash"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Transient">
+        <eTypeArguments eClassifier="#//failuretype/LinkCrashFailure"/>
+      </eGenericSuperTypes>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>
