@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <failuretype:FailureTypeRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:failuretype="http://palladiosimulator.org/failuretype/1.0" id="_sl3iMG_QEeuSGup242CHlg">
   <failuretypes xsi:type="failuretype:SWCrashFailure" id="_twWYUm_QEeuSGup242CHlg"/>
+  <failuretypes xsi:type="failuretype:SWCrashFailure" id="_f28JsYGxEeuPL_qVo6DOKA"/>
   <failuretypes xsi:type="failuretype:SWTransientCrashFailure" id="_vybk1G_QEeuSGup242CHlg" decoratedFailure="_twWYUm_QEeuSGup242CHlg">
     <duration specification="5.0"/>
   </failuretypes>

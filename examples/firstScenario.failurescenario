@@ -6,7 +6,21 @@
       <origin xsi:type="failurescenario:ProcessingResourceReference">
         <processingResource href="My.resourceenvironment#_ssJ0QYr-EeG0c6Q1F-wA1Q"/>
       </origin>
-      <pointInTime specification="1"/>
+      <pointInTime specification="1.5"/>
+    </occurences>
+    <occurences>
+      <failure xsi:type="failuretype:SWCrashFailure" href="firstScenario.failuretype#_twWYUm_QEeuSGup242CHlg"/>
+      <origin xsi:type="failurescenario:InternalActionReference">
+        <internalAction href="default.repository#_rl6MwCHbEd62GabW1zGSBw"/>
+      </origin>
+      <pointInTime specification="100.0"/>
+    </occurences>
+    <occurences>
+      <failure xsi:type="failuretype:SWCrashFailure" href="firstScenario.failuretype#_f28JsYGxEeuPL_qVo6DOKA"/>
+      <origin xsi:type="failurescenario:InternalActionReference">
+        <internalAction href="default.repository#_0eyYUCHjEd6ZSMvOJK-6LQ"/>
+      </origin>
+      <pointInTime specification="200.0"/>
     </occurences>
   </failurescenarios>
 </failurescenario:FailureScenarioRepository>
