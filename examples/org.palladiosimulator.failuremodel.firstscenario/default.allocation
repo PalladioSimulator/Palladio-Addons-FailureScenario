@@ -6,4 +6,12 @@
     <resourceContainer_AllocationContext href="My.resourceenvironment#_B0aZ0CHdEd6lJo4DCALHMw"/>
     <assemblyContext_AllocationContext href="default.system#_9c3KwCHcEd6lJo4DCALHMw"/>
   </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_oKiR4IVyEeuLT570vxXxXw" entityName="Allocation_FailureDecoratorInstance">
+    <resourceContainer_AllocationContext href="My.resourceenvironment#_B0aZ0CHdEd6lJo4DCALHMw"/>
+    <assemblyContext_AllocationContext href="default.system#_mxAvoIVxEeuLT570vxXxXw"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_og3uQIVyEeuLT570vxXxXw" entityName="Allocation_Assembly_FailureMonitor">
+    <resourceContainer_AllocationContext href="My.resourceenvironment#_B0aZ0CHdEd6lJo4DCALHMw"/>
+    <assemblyContext_AllocationContext href="default.system#_bgBHEIVyEeuLT570vxXxXw"/>
+  </allocationContexts_Allocation>
 </allocation:Allocation>

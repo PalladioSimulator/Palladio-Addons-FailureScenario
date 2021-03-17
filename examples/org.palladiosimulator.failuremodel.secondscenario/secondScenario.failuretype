@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<failuretype:FailureTypeRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:failuretype="http://palladiosimulator.org/failuretype/1.0" id="_99IBYIWnEeuOD_IgqaI_0Q" entityName="failures">
+  <failuretypes xsi:type="failuretype:SWCrashFailure" id="_VWYm0oWoEeuOD_IgqaI_0Q" entityName="swCrash"/>
+  <failuretypes xsi:type="failuretype:HWCrashFailure" id="_Njp054WpEeuOD_IgqaI_0Q" entityName="hwCrash"/>
+  <failuretypes xsi:type="failuretype:LinkCrashFailure" id="_O3fbXYWpEeuOD_IgqaI_0Q" entityName="linkCrash"/>
+</failuretype:FailureTypeRepository>
