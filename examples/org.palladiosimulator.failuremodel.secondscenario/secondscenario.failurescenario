@@ -1,26 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <failurescenario:FailureScenarioRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:failurescenario="http://palladiosimulator.org/failurescenario/1.0" xmlns:failuretype="http://palladiosimulator.org/failuretype/1.0" id="_ed69oIWpEeuOD_IgqaI_0Q" entityName="scenarios">
-  <failurescenarios id="_-caeEIWqEeuOD_IgqaI_0Q" entityName="scenario">
+  <failurescenarios id="_-caeEIWqEeuOD_IgqaI_0Q" entityName="SW_fooCrash" executionEnabled="false">
     <occurences>
       <failure xsi:type="failuretype:SWCrashFailure" href="secondScenario.failuretype#_VWYm0oWoEeuOD_IgqaI_0Q"/>
       <origin xsi:type="failurescenario:InternalActionReference">
-        <internalAction href="default.repository#_rl6MwCHbEd62GabW1zGSBw"/>
+        <internalAction href="secondscenario.repository#_3-UccIWuEeuOD_IgqaI_0Q"/>
       </origin>
-      <pointInTime specification="100.0"/>
+      <pointInTime specification="50000.0"/>
     </occurences>
+  </failurescenarios>
+  <failurescenarios id="_6ycqcIcuEeuFn9Pu6VfAAw" entityName="SW_barCrash" executionEnabled="false">
     <occurences>
       <failure xsi:type="failuretype:SWCrashFailure" href="secondScenario.failuretype#_VWYm0oWoEeuOD_IgqaI_0Q"/>
       <origin xsi:type="failurescenario:InternalActionReference">
-        <internalAction href="default.repository#_0eyYUCHjEd6ZSMvOJK-6LQ"/>
+        <internalAction href="secondscenario.repository#_C19psIXWEeuOD_IgqaI_0Q"/>
       </origin>
-      <pointInTime specification="200.0"/>
+      <pointInTime specification="50000.0"/>
     </occurences>
+  </failurescenarios>
+  <failurescenarios id="_JibpwIcrEeurDKEPDBgAZw" entityName="HW" executionEnabled="false">
     <occurences>
       <failure xsi:type="failuretype:HWCrashFailure" href="secondScenario.failuretype#_Njp054WpEeuOD_IgqaI_0Q"/>
       <origin xsi:type="failurescenario:ProcessingResourceReference">
-        <processingResource href="My.resourceenvironment#_KFRwgCpXEeKNWc2UWjbmuw"/>
+        <processingResource href="My.resourceenvironment#_v05wsIbfEeu_3J2CgEmd4g"/>
       </origin>
-      <pointInTime specification="100.0"/>
+      <pointInTime specification="50000.0"/>
+    </occurences>
+  </failurescenarios>
+  <failurescenarios id="_-MuU4IgeEeu3Q6j_zLDzXw">
+    <occurences>
+      <failure xsi:type="failuretype:LinkCrashFailure" href="secondScenario.failuretype#_O3fbXYWpEeuOD_IgqaI_0Q"/>
+      <origin xsi:type="failurescenario:LinkingResourceReference">
+        <linkingResource href="My.resourceenvironment#_AFN9gIbgEeu_3J2CgEmd4g"/>
+      </origin>
+      <pointInTime specification="50000.0"/>
     </occurences>
   </failurescenarios>
 </failurescenario:FailureScenarioRepository>
