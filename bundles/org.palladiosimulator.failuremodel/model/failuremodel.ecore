@@ -14,6 +14,9 @@
     <eClassifiers xsi:type="ecore:EClass" name="FailureScenario" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
       <eStructuralFeatures xsi:type="ecore:EReference" name="occurences" upperBound="-1"
           eType="#//failurescenario/Occurence" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="executionEnabled" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+          defaultValueLiteral="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Occurence">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -32,7 +35,8 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Reference" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="LinkingResourceReference" eSuperTypes="#//failurescenario/Reference">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="linkingResource" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/CommunicationLinkResourceSpecification"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="linkingResource" lowerBound="1"
+          eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//resourceenvironment/LinkingResource"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InternalActionReference" eSuperTypes="#//failurescenario/Reference">
       <eStructuralFeatures xsi:type="ecore:EReference" name="internalAction" lowerBound="1"
