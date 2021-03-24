@@ -12,13 +12,13 @@
           eType="#//failurescenario/FailureScenario" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FailureScenario" eSuperTypes="../../org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="occurences" upperBound="-1"
-          eType="#//failurescenario/Occurence" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="occurrences" upperBound="-1"
+          eType="#//failurescenario/Occurrence" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="executionEnabled" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
           defaultValueLiteral="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Occurence">
+    <eClassifiers xsi:type="ecore:EClass" name="Occurrence">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="ensureCorrectOrigin"/>
       </eAnnotations>

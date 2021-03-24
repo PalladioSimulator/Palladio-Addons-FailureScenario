@@ -96,6 +96,8 @@ Workflow {
 		folders = {
 			gen = "platform:/resource/org.palladiosimulator.failuremodel/src-gen"
 			src = "platform:/resource/org.palladiosimulator.failuremodel/src"
+			gen = "platform:/resource/org.palladiosimulator.failuremodel.edit/src-gen"
+			src = "platform:/resource/org.palladiosimulator.failuremodel.edit/src"
 		}
 	}	
 }
