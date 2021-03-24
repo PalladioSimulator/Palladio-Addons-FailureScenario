@@ -22,6 +22,6 @@
   </failuretypes>
   <failuretypes xsi:type="failuretype:LinkTimingFailure" id="_BZXWMIpzEeuwPoy5x_mlew" entityName="linkTiming">
     <delay specification="2.0"/>
-    <scalingFactor specification="1.0"/>
+    <scalingFactor specification="0.5"/>
   </failuretypes>
 </failuretype:FailureTypeRepository>
