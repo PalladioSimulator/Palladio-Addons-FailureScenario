@@ -18,13 +18,29 @@
       <pointInTime specification="50000.0"/>
     </occurrences>
   </failurescenarios>
-  <failurescenarios id="_H0T40IpREeuK-daBMgK9Dg" entityName="transient SW_fooCrash" executionEnabled="false">
+  <failurescenarios id="_H0T40IpREeuK-daBMgK9Dg" entityName="SW_Transient_fooCrash" executionEnabled="false">
     <occurrences>
       <failure xsi:type="failuretype:SWTransientCrashFailure" href="secondScenario.failuretype#_WL4bUIpREeuK-daBMgK9Dg"/>
       <origin xsi:type="failurescenario:InternalActionReference">
         <internalAction href="secondscenario.repository#_3-UccIWuEeuOD_IgqaI_0Q"/>
       </origin>
       <pointInTime specification="50000.0"/>
+    </occurrences>
+  </failurescenarios>
+  <failurescenarios id="_7xG0UI_wEeuWyoXPzkm2fg" entityName="two occurrences SW_Transient_fooCrash" executionEnabled="false">
+    <occurrences>
+      <failure xsi:type="failuretype:SWTransientCrashFailure" href="secondScenario.failuretype#_WL4bUIpREeuK-daBMgK9Dg"/>
+      <origin xsi:type="failurescenario:InternalActionReference">
+        <internalAction href="secondscenario.repository#_3-UccIWuEeuOD_IgqaI_0Q"/>
+      </origin>
+      <pointInTime specification="50000.0"/>
+    </occurrences>
+    <occurrences>
+      <failure xsi:type="failuretype:SWTransientCrashFailure" href="secondScenario.failuretype#_WL4bUIpREeuK-daBMgK9Dg"/>
+      <origin xsi:type="failurescenario:InternalActionReference">
+        <internalAction href="secondscenario.repository#_3-UccIWuEeuOD_IgqaI_0Q"/>
+      </origin>
+      <pointInTime specification="70000.0"/>
     </occurrences>
   </failurescenarios>
   <failurescenarios id="_6jaQYIqFEeufb5ldxFa-0g" entityName="SW_Timing" executionEnabled="false">
@@ -36,7 +52,23 @@
       <pointInTime specification="50000.0"/>
     </occurrences>
   </failurescenarios>
-  <failurescenarios id="_JibpwIcrEeurDKEPDBgAZw" entityName="HW_Crash">
+  <failurescenarios id="_S9dHwIzTEeuMtIXTu61RxA" entityName="two occurrences SW_Transient_Timing" executionEnabled="false">
+    <occurrences>
+      <failure xsi:type="failuretype:SWTransientTimingFailure" href="secondScenario.failuretype#_lLO9BI_XEeuPravqbXKj6Q"/>
+      <origin xsi:type="failurescenario:InternalActionReference">
+        <internalAction href="secondscenario.repository#_3-UccIWuEeuOD_IgqaI_0Q"/>
+      </origin>
+      <pointInTime specification="50000.0"/>
+    </occurrences>
+    <occurrences>
+      <failure xsi:type="failuretype:SWTransientTimingFailure" href="secondScenario.failuretype#_MiwHNI_eEeuCKqXMmRs2hA"/>
+      <origin xsi:type="failurescenario:InternalActionReference">
+        <internalAction href="secondscenario.repository#_3-UccIWuEeuOD_IgqaI_0Q"/>
+      </origin>
+      <pointInTime specification="70000.0"/>
+    </occurrences>
+  </failurescenarios>
+  <failurescenarios id="_JibpwIcrEeurDKEPDBgAZw" entityName="HW_Crash" executionEnabled="false">
     <occurrences>
       <failure xsi:type="failuretype:HWCrashFailure" href="secondScenario.failuretype#_Njp054WpEeuOD_IgqaI_0Q"/>
       <origin xsi:type="failurescenario:ProcessingResourceReference">
@@ -45,9 +77,9 @@
       <pointInTime specification="50000.0"/>
     </occurrences>
   </failurescenarios>
-  <failurescenarios id="_hCErgIqCEeufb5ldxFa-0g" entityName="transient HW_Crash" executionEnabled="false">
+  <failurescenarios id="_hCErgIqCEeufb5ldxFa-0g" entityName="HW_Transient_Crash" executionEnabled="false">
     <occurrences>
-      <failure xsi:type="failuretype:HWTransientNAFailure" href="secondScenario.failuretype#_KxeXSYqCEeufb5ldxFa-0g"/>
+      <failure xsi:type="failuretype:HWTransientCrashFailure" href="secondScenario.failuretype#_KxeXSYqCEeufb5ldxFa-0g"/>
       <origin xsi:type="failurescenario:ProcessingResourceReference">
         <processingResource href="My.resourceenvironment#_v05wsIbfEeu_3J2CgEmd4g"/>
       </origin>
@@ -63,6 +95,31 @@
       <pointInTime specification="50000.0"/>
     </occurrences>
   </failurescenarios>
+  <failurescenarios id="_o1gbEI_yEeuWyoXPzkm2fg" entityName="HW_transient_Timing">
+    <occurrences>
+      <failure xsi:type="failuretype:HWTransientTimingFailure" href="secondScenario.failuretype#_25OoyY_XEeuPravqbXKj6Q"/>
+      <origin xsi:type="failurescenario:ProcessingResourceReference">
+        <processingResource href="My.resourceenvironment#_v05wsIbfEeu_3J2CgEmd4g"/>
+      </origin>
+      <pointInTime specification="50000.0"/>
+    </occurrences>
+  </failurescenarios>
+  <failurescenarios id="_vwl6sI_uEeuWyoXPzkm2fg" entityName="two occurrences HW_Transient_Timing" executionEnabled="false">
+    <occurrences>
+      <failure xsi:type="failuretype:HWTransientTimingFailure" href="secondScenario.failuretype#_25OoyY_XEeuPravqbXKj6Q"/>
+      <origin xsi:type="failurescenario:ProcessingResourceReference">
+        <processingResource href="My.resourceenvironment#_v05wsIbfEeu_3J2CgEmd4g"/>
+      </origin>
+      <pointInTime specification="50000.0"/>
+    </occurrences>
+    <occurrences>
+      <failure xsi:type="failuretype:HWTransientTimingFailure" href="secondScenario.failuretype#_25OoyY_XEeuPravqbXKj6Q"/>
+      <origin xsi:type="failurescenario:ProcessingResourceReference">
+        <processingResource href="My.resourceenvironment#_v05wsIbfEeu_3J2CgEmd4g"/>
+      </origin>
+      <pointInTime specification="70000.0"/>
+    </occurrences>
+  </failurescenarios>
   <failurescenarios id="_-MuU4IgeEeu3Q6j_zLDzXw" entityName="Link_Crash" executionEnabled="false">
     <occurrences>
       <failure xsi:type="failuretype:LinkCrashFailure" href="secondScenario.failuretype#_O3fbXYWpEeuOD_IgqaI_0Q"/>
@@ -72,7 +129,7 @@
       <pointInTime specification="50000.0"/>
     </occurrences>
   </failurescenarios>
-  <failurescenarios id="_T_W7wIqFEeufb5ldxFa-0g" entityName="transient Link_Crash" executionEnabled="false">
+  <failurescenarios id="_T_W7wIqFEeufb5ldxFa-0g" entityName="Link_Transient_Crash" executionEnabled="false">
     <occurrences>
       <failure xsi:type="failuretype:LinkTransientCrashFailure" href="secondScenario.failuretype#_igDajoqEEeufb5ldxFa-0g"/>
       <origin xsi:type="failurescenario:LinkingResourceReference">
