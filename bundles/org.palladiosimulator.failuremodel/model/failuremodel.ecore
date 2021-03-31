@@ -90,6 +90,12 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="One-time termination, or for the specified duration."/>
       </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="noTransientFailureAllowedForInternalFailureDescription"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
+        <details key="noTransientFailureAllowedForInternalFailureDescription" value="not (self.decoratedFailure.oclIsKindOf(Transient))"/>
+      </eAnnotations>
       <eTypeParameters name="Failuretype">
         <eBounds eClassifier="#//failuretype/Failure"/>
       </eTypeParameters>
@@ -116,10 +122,11 @@
         <details key="documentation" value="Generates the stored failure type and triggers it every time with the probability of occurrence."/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="noByzantineFailureAllowedForInternalFailureDescription"/>
+        <details key="constraints" value="noByzantineOrTransientFailureAllowedForInternalFailureDescription"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL">
-        <details key="noByzantineFailureAllowedForInternalFailureDescription" value="not (self.decoratedFailure.oclIsKindOf(Byzantine))"/>
+        <details key="noByzantineOrTransientFailureAllowedForInternalFailureDescription"
+            value="not ( self.decoratedFailure.oclIsKindOf(Byzantine) or self.decoratedFailure.oclIsKindOf(Transient) )"/>
       </eAnnotations>
       <eTypeParameters name="Failuretype">
         <eBounds eClassifier="#//failuretype/Failure"/>
@@ -134,46 +141,40 @@
     <eClassifiers xsi:type="ecore:EClass" name="SWCrashFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Crash"/>
     <eClassifiers xsi:type="ecore:EClass" name="SWTimingFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Timing"/>
     <eClassifiers xsi:type="ecore:EClass" name="SWContentFailure" eSuperTypes="#//failuretype/SWFailure #//failuretype/Content"/>
-    <eClassifiers xsi:type="ecore:EClass" name="SWTransientCrashFailure">
+    <eClassifiers xsi:type="ecore:EClass" name="SWTransientFailure">
       <eGenericSuperTypes eClassifier="#//failuretype/SWFailure"/>
       <eGenericSuperTypes eClassifier="#//failuretype/Transient">
-        <eTypeArguments eClassifier="#//failuretype/SWCrashFailure"/>
+        <eTypeArguments eClassifier="#//failuretype/SWFailure"/>
       </eGenericSuperTypes>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SWTransientTimingFailure">
+    <eClassifiers xsi:type="ecore:EClass" name="SWByzantineFailure">
       <eGenericSuperTypes eClassifier="#//failuretype/SWFailure"/>
-      <eGenericSuperTypes eClassifier="#//failuretype/Transient">
-        <eTypeArguments eClassifier="#//failuretype/SWTimingFailure"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Byzantine">
+        <eTypeArguments eClassifier="#//failuretype/SWFailure"/>
       </eGenericSuperTypes>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="HWCrashFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Crash"/>
     <eClassifiers xsi:type="ecore:EClass" name="HWTimingFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Timing"/>
     <eClassifiers xsi:type="ecore:EClass" name="HWContentFailure" eSuperTypes="#//failuretype/HWFailure #//failuretype/Content"/>
-    <eClassifiers xsi:type="ecore:EClass" name="HWTransientCrashFailure">
+    <eClassifiers xsi:type="ecore:EClass" name="HWTransientFailure">
       <eGenericSuperTypes eClassifier="#//failuretype/HWFailure"/>
       <eGenericSuperTypes eClassifier="#//failuretype/Transient">
-        <eTypeArguments eClassifier="#//failuretype/HWCrashFailure"/>
+        <eTypeArguments eClassifier="#//failuretype/HWFailure"/>
       </eGenericSuperTypes>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="HWTransientTimingFailure">
+    <eClassifiers xsi:type="ecore:EClass" name="HWByzantineFailure">
       <eGenericSuperTypes eClassifier="#//failuretype/HWFailure"/>
-      <eGenericSuperTypes eClassifier="#//failuretype/Transient">
-        <eTypeArguments eClassifier="#//failuretype/HWTimingFailure"/>
+      <eGenericSuperTypes eClassifier="#//failuretype/Byzantine">
+        <eTypeArguments eClassifier="#//failuretype/HWFailure"/>
       </eGenericSuperTypes>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LinkCrashFailure" eSuperTypes="#//failuretype/LinkFailure #//failuretype/Crash"/>
     <eClassifiers xsi:type="ecore:EClass" name="LinkTimingFailure" eSuperTypes="#//failuretype/LinkFailure #//failuretype/Timing"/>
     <eClassifiers xsi:type="ecore:EClass" name="LinkContentFailure" eSuperTypes="#//failuretype/LinkFailure #//failuretype/Content"/>
-    <eClassifiers xsi:type="ecore:EClass" name="LinkTransientCrashFailure">
+    <eClassifiers xsi:type="ecore:EClass" name="LinkTransientFailure">
       <eGenericSuperTypes eClassifier="#//failuretype/LinkFailure"/>
       <eGenericSuperTypes eClassifier="#//failuretype/Transient">
-        <eTypeArguments eClassifier="#//failuretype/LinkCrashFailure"/>
-      </eGenericSuperTypes>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LinkTransientTimingFailure">
-      <eGenericSuperTypes eClassifier="#//failuretype/LinkFailure"/>
-      <eGenericSuperTypes eClassifier="#//failuretype/Transient">
-        <eTypeArguments eClassifier="#//failuretype/LinkTimingFailure"/>
+        <eTypeArguments eClassifier="#//failuretype/LinkFailure"/>
       </eGenericSuperTypes>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LinkByzantineFailure">

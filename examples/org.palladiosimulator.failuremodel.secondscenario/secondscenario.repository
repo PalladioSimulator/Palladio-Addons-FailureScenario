@@ -13,19 +13,13 @@
           </variableCharacterisation_VariableUsage>
           <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="parameter0"/>
         </inputVariableUsages__CallAction>
-        <returnVariableUsage__CallReturnAction>
-          <variableCharacterisation_VariableUsage type="BYTESIZE">
-            <specification_VariableCharacterisation specification="8"/>
-          </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="returnedVar"/>
-        </returnVariableUsage__CallReturnAction>
       </steps_Behaviour>
       <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_1IGXQIXwEeuOD_IgqaI_0Q" entityName="callBar" predecessor_AbstractAction="_bDGkUIXwEeuOD_IgqaI_0Q" successor_AbstractAction="_8tWG0IXvEeuOD_IgqaI_0Q" calledService_ExternalService="_-eSmAIWtEeuOD_IgqaI_0Q" role_ExternalService="_Yts5MIWuEeuOD_IgqaI_0Q">
         <inputVariableUsages__CallAction>
           <variableCharacterisation_VariableUsage type="BYTESIZE">
             <specification_VariableCharacterisation specification="8"/>
           </variableCharacterisation_VariableUsage>
-          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="returnedVar"/>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="parameter1"/>
         </inputVariableUsages__CallAction>
       </steps_Behaviour>
     </serviceEffectSpecifications__BasicComponent>
@@ -34,21 +28,20 @@
     <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FnrqkIWuEeuOD_IgqaI_0Q" entityName="ComponentB.InterfaceOfB.OperationProvidedRole1" providedInterface__OperationProvidedRole="_3y8vYIWtEeuOD_IgqaI_0Q"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Fn-lgIWuEeuOD_IgqaI_0Q" describedService__SEFF="_88WSIIWtEeuOD_IgqaI_0Q">
       <steps_Behaviour xsi:type="seff:StartAction" id="_Fn-lgYWuEeuOD_IgqaI_0Q" successor_AbstractAction="_3-UccIWuEeuOD_IgqaI_0Q"/>
-      <steps_Behaviour xsi:type="seff:StopAction" id="_Fn-lgoWuEeuOD_IgqaI_0Q" predecessor_AbstractAction="_3-UccIWuEeuOD_IgqaI_0Q"/>
-      <steps_Behaviour xsi:type="seff:InternalAction" id="_3-UccIWuEeuOD_IgqaI_0Q" entityName="computeFoo" predecessor_AbstractAction="_Fn-lgYWuEeuOD_IgqaI_0Q" successor_AbstractAction="_Fn-lgoWuEeuOD_IgqaI_0Q">
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Fn-lgoWuEeuOD_IgqaI_0Q" entityName="stopFoo" predecessor_AbstractAction="_oSMAQJBuEeuvacPbJoc6tg"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_3-UccIWuEeuOD_IgqaI_0Q" entityName="computeFoo" predecessor_AbstractAction="_Fn-lgYWuEeuOD_IgqaI_0Q" successor_AbstractAction="_oSMAQJBuEeuvacPbJoc6tg">
         <resourceDemand_Action>
           <specification_ParametericResourceDemand specification="DoublePDF[( 1.0 ; 0.25 ) ( 2.0 ; 0.5 ) ( 3.0 ; 0.25 )]"/>
           <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
         </resourceDemand_Action>
       </steps_Behaviour>
-      <steps_Behaviour xsi:type="seff:BranchAction" id="_siKrEIu1EeuHlux-43ReSA" entityName="Paramchecker">
-        <branches_Branch xsi:type="seff:GuardedBranchTransition" id="_xm2F4Iu1EeuHlux-43ReSA" entityName="GuardedBranchTransition1">
-          <branchBehaviour_BranchTransition id="_xm2F4Yu1EeuHlux-43ReSA">
-            <steps_Behaviour xsi:type="seff:StartAction" id="_xm2F4ou1EeuHlux-43ReSA" successor_AbstractAction="_xm2F44u1EeuHlux-43ReSA"/>
-            <steps_Behaviour xsi:type="seff:StopAction" id="_xm2F44u1EeuHlux-43ReSA" predecessor_AbstractAction="_xm2F4ou1EeuHlux-43ReSA"/>
-          </branchBehaviour_BranchTransition>
-          <branchCondition_GuardedBranchTransition specification="parameter0.degreeOfCorruption.VALUE &lt;= 0.5"/>
-        </branches_Branch>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_oSMAQJBuEeuvacPbJoc6tg" entityName="setResult" predecessor_AbstractAction="_3-UccIWuEeuOD_IgqaI_0Q" successor_AbstractAction="_Fn-lgoWuEeuOD_IgqaI_0Q">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="parameter0.BYTESIZE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
       </steps_Behaviour>
     </serviceEffectSpecifications__BasicComponent>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Fp0YkIWuEeuOD_IgqaI_0Q" describedService__SEFF="_-eSmAIWtEeuOD_IgqaI_0Q">
@@ -70,7 +63,7 @@
       <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
     </signatures__OperationInterface>
     <signatures__OperationInterface id="_-eSmAIWtEeuOD_IgqaI_0Q" entityName="bar">
-      <parameters__OperationSignature parameterName="parameter0">
+      <parameters__OperationSignature parameterName="parameter1">
         <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
       </parameters__OperationSignature>
     </signatures__OperationInterface>

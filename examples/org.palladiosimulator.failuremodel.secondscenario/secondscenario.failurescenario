@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <failurescenario:FailureScenarioRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:failurescenario="http://palladiosimulator.org/failurescenario/1.0" xmlns:failuretype="http://palladiosimulator.org/failuretype/1.0" id="_ed69oIWpEeuOD_IgqaI_0Q" entityName="scenarios">
-  <failurescenarios id="_-caeEIWqEeuOD_IgqaI_0Q" entityName="SW_fooCrash" executionEnabled="false">
+  <failurescenarios id="_-caeEIWqEeuOD_IgqaI_0Q" entityName="SW_fooCrash">
     <occurrences>
       <failure xsi:type="failuretype:SWCrashFailure" href="secondScenario.failuretype#_VWYm0oWoEeuOD_IgqaI_0Q"/>
       <origin xsi:type="failurescenario:InternalActionReference">
@@ -95,7 +95,7 @@
       <pointInTime specification="50000.0"/>
     </occurrences>
   </failurescenarios>
-  <failurescenarios id="_o1gbEI_yEeuWyoXPzkm2fg" entityName="HW_transient_Timing">
+  <failurescenarios id="_o1gbEI_yEeuWyoXPzkm2fg" entityName="HW_transient_Timing" executionEnabled="false">
     <occurrences>
       <failure xsi:type="failuretype:HWTransientTimingFailure" href="secondScenario.failuretype#_25OoyY_XEeuPravqbXKj6Q"/>
       <origin xsi:type="failurescenario:ProcessingResourceReference">
