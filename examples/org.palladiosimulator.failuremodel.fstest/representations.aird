@@ -18,8 +18,11 @@
     <semanticResources>testLinkTiming.failurescenario</semanticResources>
     <semanticResources>testMultipleTiming.failurescenario</semanticResources>
     <semanticResources>testMultipleTransientCrashesOneAfterAnother.failurescenario</semanticResources>
-    <semanticResources>testMultipleTransientTimingOneafteranother.failurescenario</semanticResources>
     <semanticResources>testLinkTransientByzantineCrash.failurescenario</semanticResources>
+    <semanticResources>testMultipleTransientTimingOneAfterAnother.failurescenario</semanticResources>
+    <semanticResources>testHwTransientByzantineTiming.failurescenario</semanticResources>
+    <semanticResources>testSwTransientByzantineTiming.failurescenario</semanticResources>
+    <semanticResources>testMultipleSwTransientByzantineTiming.failurescenario</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_FCoWwCF-EeqYabGLKRlfzA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.allocation/description/allocation.odesign#//@ownedViewpoints[name='Allocation']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_FDq4kyF-EeqYabGLKRlfzA" name="Allocation Diagram" repPath="#_FCoWwSF-EeqYabGLKRlfzA">
