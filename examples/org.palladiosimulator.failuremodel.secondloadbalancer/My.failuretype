@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<failuretype:FailureTypeRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:failuretype="http://palladiosimulator.org/failuretype/1.0" id="_Y_-_oJjAEeufn5LXC8t1Tg">
+  <failuretypes xsi:type="failuretype:HWTimingFailure" id="_cEWvlpjAEeufn5LXC8t1Tg">
+    <delay specification="0.0"/>
+    <scalingFactor specification="0.1"/>
+  </failuretypes>
+</failuretype:FailureTypeRepository>
