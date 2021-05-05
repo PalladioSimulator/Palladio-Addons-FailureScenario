@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_8o1VsIWsEeuOD_IgqaI_0Q" entityName="defaultRepository" repositoryDescription="">
-  <components__Repository xsi:type="repository:BasicComponent" id="_Rbz1YIWtEeuOD_IgqaI_0Q" entityName="ComponentA">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_8tAvoIXvEeuOD_IgqaI_0Q" entityName="ComponentA.userService.OperationProvidedRole1" providedInterface__OperationProvidedRole="_uPZ98IXsEeuOD_IgqaI_0Q"/>
-    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Yts5MIWuEeuOD_IgqaI_0Q" entityName="ComponentA.Services.OperationRequiredRole1" requiredInterface__OperationRequiredRole="_3y8vYIWtEeuOD_IgqaI_0Q"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_Rbz1YIWtEeuOD_IgqaI_0Q" entityName="AccessComponent">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_8tAvoIXvEeuOD_IgqaI_0Q" entityName="AccessComponent.UserService.OperationProvidedRole" providedInterface__OperationProvidedRole="_uPZ98IXsEeuOD_IgqaI_0Q"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Yts5MIWuEeuOD_IgqaI_0Q" entityName="AccessComponent.DBServices.OperationRequiredRole" requiredInterface__OperationRequiredRole="_3y8vYIWtEeuOD_IgqaI_0Q"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_8tVfwIXvEeuOD_IgqaI_0Q" describedService__SEFF="_1ZDhMIXsEeuOD_IgqaI_0Q">
       <steps_Behaviour xsi:type="seff:StartAction" id="_8tVfwYXvEeuOD_IgqaI_0Q" successor_AbstractAction="_bDGkUIXwEeuOD_IgqaI_0Q"/>
       <steps_Behaviour xsi:type="seff:StopAction" id="_8tWG0IXvEeuOD_IgqaI_0Q" predecessor_AbstractAction="_bDGkUIXwEeuOD_IgqaI_0Q"/>
@@ -16,8 +16,8 @@
       </steps_Behaviour>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <components__Repository xsi:type="repository:BasicComponent" id="_UHNrsIWtEeuOD_IgqaI_0Q" entityName="ComponentB">
-    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FnrqkIWuEeuOD_IgqaI_0Q" entityName="ComponentB.InterfaceOfB.OperationProvidedRole1" providedInterface__OperationProvidedRole="_3y8vYIWtEeuOD_IgqaI_0Q"/>
+  <components__Repository xsi:type="repository:BasicComponent" id="_UHNrsIWtEeuOD_IgqaI_0Q" entityName="DBComponent">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FnrqkIWuEeuOD_IgqaI_0Q" entityName="DBComponent.DBServices.OperationProvidedRole" providedInterface__OperationProvidedRole="_3y8vYIWtEeuOD_IgqaI_0Q"/>
     <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Fn-lgIWuEeuOD_IgqaI_0Q" describedService__SEFF="_88WSIIWtEeuOD_IgqaI_0Q">
       <steps_Behaviour xsi:type="seff:StartAction" id="_Fn-lgYWuEeuOD_IgqaI_0Q" successor_AbstractAction="_3-UccIWuEeuOD_IgqaI_0Q"/>
       <steps_Behaviour xsi:type="seff:StopAction" id="_Fn-lgoWuEeuOD_IgqaI_0Q" entityName="stopFoo" predecessor_AbstractAction="_g6yu4JajEeuHo8ag6GtBlw"/>
@@ -51,14 +51,14 @@
       </steps_Behaviour>
     </serviceEffectSpecifications__BasicComponent>
   </components__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_3y8vYIWtEeuOD_IgqaI_0Q" entityName="Services">
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_3y8vYIWtEeuOD_IgqaI_0Q" entityName="DBServices">
     <signatures__OperationInterface id="_88WSIIWtEeuOD_IgqaI_0Q" entityName="query">
       <parameters__OperationSignature parameterName="parameter0">
         <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
       </parameters__OperationSignature>
     </signatures__OperationInterface>
   </interfaces__Repository>
-  <interfaces__Repository xsi:type="repository:OperationInterface" id="_uPZ98IXsEeuOD_IgqaI_0Q" entityName="userService">
-    <signatures__OperationInterface id="_1ZDhMIXsEeuOD_IgqaI_0Q" entityName="doComputations"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_uPZ98IXsEeuOD_IgqaI_0Q" entityName="UserService">
+    <signatures__OperationInterface id="_1ZDhMIXsEeuOD_IgqaI_0Q" entityName="analyzeDBStatus"/>
   </interfaces__Repository>
 </repository:Repository>

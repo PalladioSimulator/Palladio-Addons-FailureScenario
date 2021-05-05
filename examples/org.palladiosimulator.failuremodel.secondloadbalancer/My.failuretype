@@ -4,4 +4,7 @@
     <delay specification="0.0"/>
     <scalingFactor specification="0.1"/>
   </failuretypes>
+  <failuretypes xsi:type="failuretype:HWTransientFailure" id="_iXng2KHpEeunxYvqgvXvIg" entityName="HW Transient Timing" decoratedFailure="_cEWvlpjAEeufn5LXC8t1Tg">
+    <duration specification="400.0"/>
+  </failuretypes>
 </failuretype:FailureTypeRepository>

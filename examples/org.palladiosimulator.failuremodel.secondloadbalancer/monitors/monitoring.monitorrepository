@@ -3,7 +3,7 @@
   <monitors id="_LQcqIMltEeSsG6YHnSxiuA" entityName="System Response Time">
     <measurementSpecifications id="_vZLk8Mu0EeSC07Pn0gpm5Q">
       <metricDescription xsi:type="metricspec:NumericalBaseMetricDescription" href="pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec#_6rYmYs7nEeOX_4BzImuHbA"/>
-      <processingType xsi:type="monitorrepository:TimeDrivenAggregation" id="_u_Mgsu0UEeWdrOr0QROn8g">
+      <processingType xsi:type="monitorrepository:TimeDrivenAggregation" id="_u_Mgsu0UEeWdrOr0QROn8g" windowLength="20.0" windowIncrement="20.0">
         <statisticalCharacterization xsi:type="monitorrepository:ArithmeticMean"/>
       </processingType>
     </measurementSpecifications>
@@ -28,7 +28,7 @@
   <monitors id="_qh0UkAOzEeWk4qXEVpjV-g" entityName="Server1">
     <measurementSpecifications id="_t9ApEAOzEeWk4qXEVpjV-g">
       <metricDescription xsi:type="metricspec:NumericalBaseMetricDescription" href="pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec#_6rYmYs7nEeOX_4BzImuHbA"/>
-      <processingType xsi:type="monitorrepository:TimeDrivenAggregation" id="_F-A_ogJ9Eeii4a_bO5GIsg">
+      <processingType xsi:type="monitorrepository:TimeDrivenAggregation" id="_F-A_ogJ9Eeii4a_bO5GIsg" windowLength="100.0" windowIncrement="20.0">
         <statisticalCharacterization xsi:type="monitorrepository:ArithmeticMean"/>
       </processingType>
     </measurementSpecifications>
@@ -37,7 +37,7 @@
   <monitors id="_sxfRIAOzEeWk4qXEVpjV-g" entityName="Server2">
     <measurementSpecifications id="_5osNEAOzEeWk4qXEVpjV-g">
       <metricDescription xsi:type="metricspec:NumericalBaseMetricDescription" href="pathmap://METRIC_SPEC_MODELS/commonMetrics.metricspec#_6rYmYs7nEeOX_4BzImuHbA"/>
-      <processingType xsi:type="monitorrepository:TimeDrivenAggregation" id="_HQTt8gJ9Eeii4a_bO5GIsg">
+      <processingType xsi:type="monitorrepository:TimeDrivenAggregation" id="_HQTt8gJ9Eeii4a_bO5GIsg" windowLength="200.0" windowIncrement="20.0">
         <statisticalCharacterization xsi:type="monitorrepository:ArithmeticMean"/>
       </processingType>
     </measurementSpecifications>

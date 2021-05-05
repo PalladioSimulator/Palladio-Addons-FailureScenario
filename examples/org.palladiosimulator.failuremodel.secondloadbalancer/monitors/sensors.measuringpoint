@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <org.palladiosimulator.edp2.models:MeasuringPointRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.palladiosimulator.edp2.models="http://palladiosimulator.org/EDP2/MeasuringPoint/1.0" xmlns:pcmmeasuringpoint="http://palladiosimulator.org/PCM/MeasuringPoint/1.0" xmlns:simulizarmeasuringpoint="http://palladiosimulator.org/simulizar/measuringpoint" id="_3a_GIMltEeSsG6YHnSxiuA">
-  <measuringPoints xsi:type="pcmmeasuringpoint:UsageScenarioMeasuringPoint" stringRepresentation="Usage Scenario: overloadUsageScenario" resourceURIRepresentation="platform:/resource/org.palladiosimulator.failuremodel.secondloadbalancer/overload.usagemodel#_YtqF4AEqEeS7FKokKTKFow">
-    <usageScenario href="../overload.usagemodel#_YtqF4AEqEeS7FKokKTKFow"/>
+  <measuringPoints xsi:type="pcmmeasuringpoint:UsageScenarioMeasuringPoint" stringRepresentation="Usage Scenario: FailureTestingUsageScenario" resourceURIRepresentation="platform:/resource/org.palladiosimulator.failuremodel.secondloadbalancer/failureScenario.usagemodel#_LPnI8CHdEd6lJo4DCALHMw">
+    <usageScenario href="../failureScenario.usagemodel#_LPnI8CHdEd6lJo4DCALHMw"/>
   </measuringPoints>
   <measuringPoints xsi:type="pcmmeasuringpoint:ResourceEnvironmentMeasuringPoint" stringRepresentation="Resource Environment: IaaS" resourceURIRepresentation="platform:/resource/org.palladiosimulator.failuremodel.secondloadbalancer/iaas.resourceenvironment#/">
     <resourceEnvironment href="../iaas.resourceenvironment#/"/>

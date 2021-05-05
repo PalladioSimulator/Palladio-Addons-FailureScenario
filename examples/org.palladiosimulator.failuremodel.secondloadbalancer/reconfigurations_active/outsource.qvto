@@ -66,7 +66,7 @@ transformation outsource(	in runtimeMeasurement : RUNTIMEMEASUREMENT,
 	helper Set(RuntimeMeasurement) :: checkCondition() : Boolean {
 	
 		self->forEach(measurement) {
-		log('Measured value at ' + measurement.measuringPoint.stringRepresentation + ' is ' + measurement.measuringValue.toString());
+		log('Measured value is ' + measurement.measuringValue.toString());
 		
 			if (measurement.measuringValue > threshold) {
 		

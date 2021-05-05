@@ -2,11 +2,11 @@
 <failurescenario:FailureScenarioRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:failurescenario="http://palladiosimulator.org/failurescenario/1.0" xmlns:failuretype="http://palladiosimulator.org/failuretype/1.0" id="_ljjN4JjAEeufn5LXC8t1Tg">
   <failurescenarios id="_mqLewJjAEeufn5LXC8t1Tg" entityName="delay of 10s on first server">
     <occurrences>
-      <failure xsi:type="failuretype:HWTimingFailure" href="My.failuretype#_cEWvlpjAEeufn5LXC8t1Tg"/>
+      <failure xsi:type="failuretype:HWTransientFailure" href="My.failuretype#_iXng2KHpEeunxYvqgvXvIg"/>
       <origin xsi:type="failurescenario:ProcessingResourceReference">
         <processingResource href="iaas.resourceenvironment#_GAVEEAEqEeS7FKokKTKFow"/>
       </origin>
-      <pointInTime specification="10.0"/>
+      <pointInTime specification="200.0"/>
     </occurrences>
   </failurescenarios>
 </failurescenario:FailureScenarioRepository>
