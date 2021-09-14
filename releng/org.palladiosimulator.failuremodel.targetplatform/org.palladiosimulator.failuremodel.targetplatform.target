@@ -7,7 +7,11 @@
             <repository location="https://updatesite.mdsd.tools/build-licensefeature/releases/1.0.0" />
         </location>
 
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" refresh="true" includeSource="false" type="InstallableUnit">
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" refresh="true" includeSource="false" type="InstallableUnit" filter="release">
+            <unit id="org.palladiosimulator.pcm.feature.feature.group" version="4.1.0.201709282114" />
+            <repository location="https://updatesite.palladio-simulator.com/palladio-core-pcm/releases/latest/" />
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" refresh="true" includeSource="false" type="InstallableUnit" filter="nightly">
             <unit id="org.palladiosimulator.pcm.feature.feature.group" version="4.1.0.201709282114" />
             <repository location="https://updatesite.palladio-simulator.com/palladio-core-pcm/nightly/" />
         </location>
@@ -21,17 +25,29 @@
 			<repository location="https://updatesite.palladio-simulator.com/palladio-analyzer-reliability/nightly/"/>
 		</location>
 
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release" refresh="true">
+            <unit id="de.uka.ipd.sdq.identifier.feature.feature.group" version="tbd" />
+            <repository location="https://updatesite.palladio-simulator.com/palladio-core-commons/releases/latest/" />
+        </location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly" refresh="true">
             <unit id="de.uka.ipd.sdq.identifier.feature.feature.group" version="tbd" />
             <repository location="https://updatesite.palladio-simulator.com/palladio-core-commons/nightly/" />
         </location>
 
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" refresh="true" includeSource="false" type="InstallableUnit">
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" refresh="true" includeSource="false" type="InstallableUnit" filter="release">
+            <unit id="org.palladiosimulator.editors.commons.feature.feature.group" version="2.1.1.201709282144" />
+            <repository location="https://updatesite.palladio-simulator.com/palladio-editors-commons/releases/latest/" />
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" refresh="true" includeSource="false" type="InstallableUnit" filter="nightly" >
             <unit id="org.palladiosimulator.editors.commons.feature.feature.group" version="2.1.1.201709282144" />
             <repository location="https://updatesite.palladio-simulator.com/palladio-editors-commons/nightly/" />
         </location>
 
-        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" refresh="true" includeSource="false" type="InstallableUnit">
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" refresh="true" includeSource="false" type="InstallableUnit" filter="release">
+            <unit id="org.palladiosimulator.editors.tree.feature.feature.group" version="1.0.0" />
+            <repository location="https://updatesite.palladio-simulator.com/palladio-editors-tree/releases/latest/" />
+        </location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" refresh="true" includeSource="false" type="InstallableUnit" filter="nightly">
             <unit id="org.palladiosimulator.editors.tree.feature.feature.group" version="1.0.0" />
             <repository location="https://updatesite.palladio-simulator.com/palladio-editors-tree/nightly/" />
         </location>
@@ -142,8 +158,7 @@
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="nightly">
             <unit id="org.palladiosimulator.simulizar.feature.feature.group" version="0.0.0" />
             <unit id="org.palladiosimulator.simulizar.test.commons.feature.feature.group" version="0.0.0" />
-            <repository location="https://updatesite.palladio-simulator.com/palladio-analyzer-simulizar/branches/PR-77/" />
-            <!--<repository location="https://updatesite.palladio-simulator.com/palladio-analyzer-simulizar/nightly/" />-->
+            <repository location="https://updatesite.palladio-simulator.com/palladio-analyzer-simulizar/nightly/" />
         </location>
 
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit" filter="release">
