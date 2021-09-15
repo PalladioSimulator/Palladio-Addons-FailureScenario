@@ -12,3 +12,8 @@ buildNumber.properties
 bin/
 src-gen/
 xtend-gen/
+.polyglot.pom.tycho
+.polyglot.META-INF
+.polyglot.feature.xml
+.polyglot.category.xml
+.polyglot.*.target
