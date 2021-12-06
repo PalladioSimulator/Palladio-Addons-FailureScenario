@@ -2,7 +2,7 @@
 <feature
       id="org.palladiosimulator.failuremodel.feature"
       label="Palladio-Addons-Failuremodel Feature"
-      version="5.0.0.qualifier"
+      version="5.1.0.qualifier"
       license-feature="tools.mdsd.license.epl2"
       license-feature-version="1.0.0">
 

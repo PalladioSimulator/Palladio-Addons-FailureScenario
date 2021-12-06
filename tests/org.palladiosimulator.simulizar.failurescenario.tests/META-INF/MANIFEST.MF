@@ -2,8 +2,8 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: FailureScenario Tests
 Bundle-SymbolicName: org.palladiosimulator.simulizar.failurescenario.tests
-Bundle-Version: 1.0.0.qualifier
-Fragment-Host: org.palladiosimulator.simulizar.failurescenario;bundle-version="1.0.0"
+Bundle-Version: 5.1.0.qualifier
+Fragment-Host: org.palladiosimulator.simulizar.failurescenario;bundle-version="5.1.0"
 Automatic-Module-Name: org.palladiosimulator.simulizar.failuremodel.tests
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.eclipse.xtext.xbase.lib,

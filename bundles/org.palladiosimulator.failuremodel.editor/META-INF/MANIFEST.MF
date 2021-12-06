@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.palladiosimulator.failuremodel.editor;singleton:=true
 Automatic-Module-Name: org.palladiosimulator.failuremodel.editor
-Bundle-Version: 5.0.0.qualifier
+Bundle-Version: 5.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.failuremodel.failurescenario.presentation.FailuremodelEditorPlugin$Implementation
 Bundle-Vendor: %providerName
