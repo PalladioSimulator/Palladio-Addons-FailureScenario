@@ -8,8 +8,6 @@ jobs:
     with:
       use-display-output: true
       no-caching: true
-      runner-label: ubuntu-latest
-      no-caching: true
       java-version: 17
       runner-label: ubuntu-latest
       deploy-updatesite: 'releng/org.palladiosimulator.failuremodel.updatesite/target/repository'
