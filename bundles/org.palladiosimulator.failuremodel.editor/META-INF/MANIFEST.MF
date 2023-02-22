@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.failuremodel.failurescenario.presentation.FailuremodelEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.palladiosimulator.failuremodel.failurescenario.presentation,
  org.palladiosimulator.failuremodel.failuretype.presentation
 Require-Bundle: org.eclipse.core.runtime,
