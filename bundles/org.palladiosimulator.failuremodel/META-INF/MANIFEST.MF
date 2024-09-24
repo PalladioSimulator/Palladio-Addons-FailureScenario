@@ -7,11 +7,15 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Automatic-Module-Name: org.palladiosimulator.failuremodel
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.15.0",
  org.eclipse.emf.ecore;bundle-version="2.19.0";visibility:=reexport,
+ de.uka.ipd.sdq.identifier;visibility:=reexport,
  org.palladiosimulator.failuremodel.mwe2;bundle-version="5.2.0";resolution:=optional,
- org.palladiosimulator.pcm;bundle-version="4.3.0"
+ org.palladiosimulator.pcm;bundle-version="4.3.0";visibility:=reexport,
+ de.uka.ipd.sdq.probfunction;visibility:=reexport,
+ de.uka.ipd.sdq.stoex;visibility:=reexport,
+ de.uka.ipd.sdq.units;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Export-Package: org.palladiosimulator.failuremodel.failurescenario,
  org.palladiosimulator.failuremodel.failurescenario.impl,
