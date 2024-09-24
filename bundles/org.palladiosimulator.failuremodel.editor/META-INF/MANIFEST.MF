@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Activator: org.palladiosimulator.failuremodel.failurescenario.presentation.FailuremodelEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.palladiosimulator.failuremodel.failurescenario.presentation,
  org.palladiosimulator.failuremodel.failuretype.presentation
 Require-Bundle: org.eclipse.core.runtime,
@@ -17,6 +17,11 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
- org.eclipse.emf.ecore.edit;bundle-version="2.13.0",
+ org.eclipse.emf.ecore.edit;bundle-version="2.13.0";visibility:=reexport,
+ de.uka.ipd.sdq.identifier.edit;visibility:=reexport,
+ org.palladiosimulator.pcm.edit;visibility:=reexport,
+ de.uka.ipd.sdq.probfunction.edit;visibility:=reexport,
+ de.uka.ipd.sdq.stoex.edit;visibility:=reexport,
+ de.uka.ipd.sdq.units.edit;visibility:=reexport,
  org.palladiosimulator.pcm.editor;bundle-version="4.3.0"
 Bundle-ActivationPolicy: lazy
