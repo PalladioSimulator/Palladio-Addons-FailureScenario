@@ -6,7 +6,7 @@ import javax.inject.Inject;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
-import org.palladiosimulator.analyzer.workflow.blackboard.PCMResourceSetPartition;
+import org.palladiosimulator.analyzer.workflow.core.blackboard.PCMResourceSetPartition;
 import org.palladiosimulator.failuremodel.failurescenario.FailureScenario;
 import org.palladiosimulator.failuremodel.failurescenario.FailureScenarioRepository;
 import org.palladiosimulator.failuremodel.failurescenario.FailurescenarioPackage;
