@@ -5,8 +5,8 @@ import org.palladiosimulator.simulizar.failurescenario.interpreter.behavior.IBeh
 import org.palladiosimulator.simulizar.failurescenario.interpreter.behavior.demandmodifying.DecisionDecoratedDemandModifyingBehavior;
 import org.palladiosimulator.simulizar.failurescenario.interpreter.dto.StrategyAllocationContext;
 
-import de.uka.ipd.sdq.simucomframework.resources.DemandModifyingBehavior;
-import de.uka.ipd.sdq.simucomframework.resources.IResourceDemandModifiable;
+import de.uka.ipd.sdq.simucomframework.core.resources.DemandModifyingBehavior;
+import de.uka.ipd.sdq.simucomframework.core.resources.IResourceDemandModifiable;
 
 public abstract class AbstractDemandModifyingBehaviorStrategy implements FailureBehaviorChangingStrategy {
 

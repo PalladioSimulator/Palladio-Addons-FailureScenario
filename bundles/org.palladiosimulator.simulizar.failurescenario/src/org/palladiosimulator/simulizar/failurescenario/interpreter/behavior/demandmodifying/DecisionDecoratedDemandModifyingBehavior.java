@@ -3,8 +3,8 @@ package org.palladiosimulator.simulizar.failurescenario.interpreter.behavior.dem
 import org.palladiosimulator.simulizar.failurescenario.interpreter.behavior.BehavioralDecider;
 import org.palladiosimulator.simulizar.failurescenario.interpreter.behavior.IBehavioralDecisionDecorated;
 
-import de.uka.ipd.sdq.simucomframework.resources.DemandModification;
-import de.uka.ipd.sdq.simucomframework.resources.DemandModifyingBehavior;
+import de.uka.ipd.sdq.simucomframework.core.resources.DemandModification;
+import de.uka.ipd.sdq.simucomframework.core.resources.DemandModifyingBehavior;
 
 public class DecisionDecoratedDemandModifyingBehavior extends DemandModifyingBehavior implements IBehavioralDecisionDecorated {
 

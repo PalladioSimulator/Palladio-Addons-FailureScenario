@@ -23,7 +23,7 @@ import org.palladiosimulator.simulizar.runtimestate.PreInterpretationBehaviorMan
 import org.palladiosimulator.simulizar.utils.PCMPartitionManager.Global;
 
 import de.uka.ipd.sdq.probfunction.math.IRandomGenerator;
-import de.uka.ipd.sdq.simucomframework.ResourceRegistry;
+import de.uka.ipd.sdq.simucomframework.core.ResourceRegistry;
 import de.uka.ipd.sdq.simucomframework.variables.StackContext;
 import de.uka.ipd.sdq.simucomframework.variables.converter.NumberConverter;
 import de.uka.ipd.sdq.simulation.abstractsimengine.ISimEventFactory;

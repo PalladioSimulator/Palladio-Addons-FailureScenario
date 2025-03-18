@@ -3,8 +3,8 @@ package org.palladiosimulator.simulizar.failurescenario.interpreter.strategies.i
 import org.palladiosimulator.simulizar.failurescenario.interpreter.strategies.AbstractDemandModifyingBehaviorStrategy;
 import org.palladiosimulator.simulizar.failurescenario.interpreter.strategies.FailureBehaviorChangingStrategy;
 
-import de.uka.ipd.sdq.simucomframework.resources.DemandModifyingBehavior;
-import de.uka.ipd.sdq.simucomframework.resources.IResourceDemandModifiable;
+import de.uka.ipd.sdq.simucomframework.core.resources.DemandModifyingBehavior;
+import de.uka.ipd.sdq.simucomframework.core.resources.IResourceDemandModifiable;
 
 public class RemoveDemandModifyingBehaviorStrategy extends AbstractDemandModifyingBehaviorStrategy {
 	public RemoveDemandModifyingBehaviorStrategy(IResourceDemandModifiable modifiableResource,
