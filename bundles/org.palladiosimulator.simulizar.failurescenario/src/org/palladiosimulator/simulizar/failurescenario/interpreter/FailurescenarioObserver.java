@@ -11,6 +11,7 @@ import org.palladiosimulator.failuremodel.failurescenario.FailureScenario;
 import org.palladiosimulator.failuremodel.failurescenario.FailureScenarioRepository;
 import org.palladiosimulator.failuremodel.failurescenario.FailurescenarioPackage;
 import org.palladiosimulator.pcm.seff.SeffPackage;
+import org.palladiosimulator.simulizar.core.utils.PCMPartitionManager.Global;
 import org.palladiosimulator.simulizar.failurescenario.interpreter.behavior.preinterpretation.AddDegreeOfCorruptionCharacterisationBehavior;
 import org.palladiosimulator.simulizar.failurescenario.interpreter.dto.FailureBehaviorChange;
 import org.palladiosimulator.simulizar.failurescenario.interpreter.dto.StrategyAllocationContext;
@@ -20,7 +21,6 @@ import org.palladiosimulator.simulizar.failurescenario.interpreter.provider.Sche
 import org.palladiosimulator.simulizar.modelobserver.AllocationLookupSyncer;
 import org.palladiosimulator.simulizar.modelobserver.IModelObserver;
 import org.palladiosimulator.simulizar.runtimestate.PreInterpretationBehaviorManager;
-import org.palladiosimulator.simulizar.utils.PCMPartitionManager.Global;
 
 import de.uka.ipd.sdq.probfunction.math.IRandomGenerator;
 import de.uka.ipd.sdq.simucomframework.core.ResourceRegistry;
