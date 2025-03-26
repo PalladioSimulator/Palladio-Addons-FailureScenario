@@ -5,8 +5,8 @@ import org.eclipse.core.runtime.IExecutableExtensionFactory;
 import org.palladiosimulator.simulizar.di.component.core.SimuLizarRuntimeComponent;
 import org.palladiosimulator.simulizar.di.component.dependency.SimEngineComponent;
 import org.palladiosimulator.simulizar.di.component.dependency.SimuComFrameworkComponent;
-import org.palladiosimulator.simulizar.di.extension.ExtensionComponent;
-import org.palladiosimulator.simulizar.di.scopes.RuntimeExtensionScope;
+import org.palladiosimulator.simulizar.di.core.extension.ExtensionComponent;
+import org.palladiosimulator.simulizar.di.core.scopes.RuntimeExtensionScope;
 import org.palladiosimulator.simulizar.failurescenario.interpreter.FailurescenarioObserver;
 
 import dagger.Component;
