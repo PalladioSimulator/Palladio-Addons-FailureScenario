@@ -1,6 +1,6 @@
 package org.palladiosimulator.simulizar.failurescenario.di;
 
-import org.palladiosimulator.simulizar.di.core.scopes.RuntimeExtensionScope;
+import org.palladiosimulator.simulizar.di.base.scopes.RuntimeExtensionScope;
 import org.palladiosimulator.simulizar.interpreter.InterpreterDefaultContext;
 
 import dagger.Binds;
