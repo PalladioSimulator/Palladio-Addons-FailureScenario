@@ -4,12 +4,12 @@ import org.palladiosimulator.failuremodel.failurescenario.LinkingResourceReferen
 import org.palladiosimulator.failuremodel.failurescenario.ProcessingResourceReference;
 import org.palladiosimulator.failuremodel.failurescenario.util.FailurescenarioSwitch;
 
-import de.uka.ipd.sdq.simucomframework.ResourceRegistry;
-import de.uka.ipd.sdq.simucomframework.resources.IResourceDemandModifiable;
-import de.uka.ipd.sdq.simucomframework.resources.ScheduledResource;
-import de.uka.ipd.sdq.simucomframework.resources.SimulatedLinkingResource;
-import de.uka.ipd.sdq.simucomframework.resources.SimulatedLinkingResourceContainer;
-import de.uka.ipd.sdq.simucomframework.resources.SimulatedResourceContainer;
+import de.uka.ipd.sdq.simucomframework.core.ResourceRegistry;
+import de.uka.ipd.sdq.simucomframework.core.resources.IResourceDemandModifiable;
+import de.uka.ipd.sdq.simucomframework.core.resources.ScheduledResource;
+import de.uka.ipd.sdq.simucomframework.core.resources.SimulatedLinkingResource;
+import de.uka.ipd.sdq.simucomframework.core.resources.SimulatedLinkingResourceContainer;
+import de.uka.ipd.sdq.simucomframework.core.resources.SimulatedResourceContainer;
 
 public class ScheduledResourceProviderSwitch extends FailurescenarioSwitch<IResourceDemandModifiable> {
 
