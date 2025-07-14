@@ -2,13 +2,13 @@ package org.palladiosimulator.simulizar.failurescenario.di;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IExecutableExtensionFactory;
+import org.palladiosimulator.simulizar.core.runconfig.SimuLizarWorkflowConfiguration;
+import org.palladiosimulator.simulizar.di.base.extension.ExtensionComponent;
+import org.palladiosimulator.simulizar.di.base.scopes.RootExtensionScope;
 import org.palladiosimulator.simulizar.di.component.core.SimuLizarRootComponent;
-import org.palladiosimulator.simulizar.di.extension.ExtensionComponent;
 import org.palladiosimulator.simulizar.failurescenario.jobs.FailurescenarioModelContribution;
 import org.palladiosimulator.simulizar.failurescenario.jobs.config.LoadFailurescenarioExtensionIntoBlackboardJobConfig;
 import org.palladiosimulator.simulizar.failurescenario.ui.config.FailurescenarioExtensionFileInputConfigurationBuilder;
-import org.palladiosimulator.simulizar.runconfig.SimuLizarWorkflowConfiguration;
-import org.palladiosimulator.simulizar.scopes.RootExtensionScope;
 
 import dagger.Component;
 import dagger.Provides;

@@ -22,7 +22,7 @@ import org.palladiosimulator.simulizar.failurescenario.interpreter.strategies.im
 import org.palladiosimulator.simulizar.failurescenario.interpreter.strategies.impl.AddPreInterpretationBehaviorStrategy;
 
 import de.uka.ipd.sdq.probfunction.math.IRandomGenerator;
-import de.uka.ipd.sdq.simucomframework.resources.DemandModifyingBehavior;
+import de.uka.ipd.sdq.simucomframework.core.resources.DemandModifyingBehavior;
 import de.uka.ipd.sdq.simucomframework.variables.StackContext;
 import de.uka.ipd.sdq.simucomframework.variables.converter.NumberConverter;
 
