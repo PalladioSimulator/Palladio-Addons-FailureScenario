@@ -42,7 +42,9 @@
 			<unit id="org.palladiosimulator.measurementframework.feature.feature.group" version="0.0.0"/>
 			<repository location="https://updatesite.palladio-simulator.com/palladio-qual-measurementframework/branches/no_ui-edp2"/>
 		</location>
-		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit"><unit id="org.palladiosimulator.probeframework.feature.feature.group" version="0.0.0"/><repository location="https://updatesite.palladio-simulator.com/palladio-qual-probeframework/branches/no_ui-edp2"/>--&gt;
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
+			<unit id="org.palladiosimulator.probeframework.feature.feature.group" version="0.0.0"/>
+			<repository location="https://updatesite.palladio-simulator.com/palladio-qual-probeframework/branches/no_ui-edp2"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
 			<unit id="org.palladiosimulator.monitorrepository.feature.feature.group" version="0.0.0"/>
@@ -105,7 +107,8 @@
 			<unit id="org.palladiosimulator.experimentanalysis.tests.feature.feature.group" version="0.0.0"/>
 			<repository location="https://updatesite.palladio-simulator.com/palladio-qual-experimentanalysis/branches/no_ui-edp2"/>
 		</location>
-		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit"><unit id="tools.descartes.dlim.feature.feature.group" version="0.0.0"/>^M
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
+			<unit id="tools.descartes.dlim.feature.feature.group" version="0.0.0"/>
 			<repository location="https://updatesite.palladio-simulator.com/palladio-thirdparty-limbo/nightly/"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="false" type="InstallableUnit">
