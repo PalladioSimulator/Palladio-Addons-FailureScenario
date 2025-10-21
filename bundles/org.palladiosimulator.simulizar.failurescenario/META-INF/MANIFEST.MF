@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: SimuLizar Failurescenario Extension
 Bundle-SymbolicName: org.palladiosimulator.simulizar.failurescenario;singleton:=true
-Bundle-Version: 5.2.0.qualifier
+Bundle-Version: 6.0.0.qualifier
 Automatic-Module-Name: org.palladiosimulator.simulizar.failurescenario
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: javax.inject;bundle-version="1.0.0",
