@@ -2,23 +2,23 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: FailureScenario Tests
 Bundle-SymbolicName: org.palladiosimulator.simulizar.failurescenario.tests
-Bundle-Version: 5.2.2
-Fragment-Host: org.palladiosimulator.simulizar.failurescenario;bundle-version="5.2.0"
+Bundle-Version: 6.0.0.qualifier
+Fragment-Host: org.palladiosimulator.simulizar.failurescenario
 Automatic-Module-Name: org.palladiosimulator.simulizar.failuremodel.tests
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.eclipse.xtext.xbase.lib,
  org.eclipse.xtend.lib,
  org.eclipse.xtend.lib.macro,
- org.palladiosimulator.simulizar.reconfiguration.qvto;bundle-version="5.0.0",
- org.palladiosimulator.edp2.repository.local;bundle-version="4.3.0",
- org.palladiosimulator.pcm.resources;bundle-version="5.0.0",
- de.uka.ipd.sdq.simulation.abstractsimengine.desmoj;bundle-version="4.3.0",
- de.uka.ipd.sdq.errorhandling;bundle-version="4.3.0",
+ org.palladiosimulator.simulizar.reconfiguration.qvto,
+ org.palladiosimulator.edp2.repository.local,
+ org.palladiosimulator.pcm.resources,
+ de.uka.ipd.sdq.simulation.abstractsimengine.desmoj,
+ de.uka.ipd.sdq.errorhandling,
  tools.mdsd.library.standalone.initialization;bundle-version="0.1.0",
  de.desmoj;bundle-version="2.3.3",
  tools.mdsd.junit5utils;bundle-version="0.1.0",
- org.palladiosimulator.simulizar.test.commons;bundle-version="5.0.0",
- org.palladiosimulator.commons.stoex.ide;bundle-version="5.0.0"
+ org.palladiosimulator.simulizar.test.commons,
+ org.palladiosimulator.commons.stoex.ide
 Import-Package: com.google.common.util.concurrent.internal;version="1.0.1",
  com.google.inject.util;version="1.4.0",
  net.bytebuddy.dynamic.loading;version="1.6.0",
