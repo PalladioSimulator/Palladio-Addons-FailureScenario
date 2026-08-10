@@ -1,6 +1,6 @@
 package org.palladiosimulator.simulizar.failurescenario.jobs;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.eclipse.emf.common.util.URI;
 import org.palladiosimulator.simulizar.failurescenario.jobs.config.LoadFailurescenarioExtensionIntoBlackboardJobConfig;
